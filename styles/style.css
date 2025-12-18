@@ -1,3 +1,19 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+
+*/
+
 .page {
   width: calc(100vw * (700 / 1440));
   min-width: 430px;
@@ -9,7 +25,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: "wght" var(--themes-fw-content);
+  font-variation-settings: "wght" var(--themes-font-weight-content);
 }
 
 /* Header */
@@ -22,7 +38,7 @@
   border: 2px solid var(--themes-main-color);
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px 0;
   font-family: var(--font-accent);
-  background-color: var(--themes-bg-color);
+  background-color: var(--themes-backgroud-color);
 }
 
 .header__logo {
@@ -112,13 +128,13 @@
 /* Post */
 .post {
   border: 2px solid var(--themes-main-color);
-  background-color: var(--themes-bg-color);
+  background-color: var(--themes-backgroud-color);
 }
 
 .post__title {
   padding: 5px 10px;
   font-size: 18px;
-  font-variation-settings: "wght" var(--themes-fw-title);
+  font-variation-settings: "wght" var(--themes-font-weight-title);
 }
 
 .post__cover {
@@ -145,20 +161,20 @@
   font-family: var(--font-accent);
   font-weight: 400;
   font-size: 14px;
-  text-shadow: 0 0 1px var(--themes-bg-color);
+  text-shadow: 0 0 1px var(--themes-backgroud-color);
 }
 
 @supports (
   (
-      (text-stroke: 1px var(--themes-bg-color)) or
-        (-webkit-text-stroke: 1px var(--themes-bg-color))
+      (text-stroke: 1px var(--themes-backgroud-color)) or
+        (-webkit-text-stroke: 1px var(--themes-backgroud-color))
     )
     and (mix-blend-mode: hard-light)
 ) {
   .post__cover__watermark {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--themes-bg-color);
-    text-stroke: 1px var(--themes-bg-color);
+    -webkit-text-stroke: 1px var(--themes-backgroud-color);
+    text-stroke: 1px var(--themes-backgroud-color);
     mix-blend-mode: hard-light;
   }
 }
@@ -171,7 +187,7 @@
   padding-bottom: 22px;
   font-size: 18px;
   line-height: 21px;
-  font-variation-settings: "wght" var(--themes-fw-content);
+  font-variation-settings: "wght" var(--themes-font-weight-content);
 }
 
 .post__buttons {
@@ -233,7 +249,7 @@
 /* btn */
 
 .button__container {
-  background: var(--themes-bg-color);
+  background: var(--themes-backgroud-color);
 }
 
 .button {
@@ -242,7 +258,7 @@
   justify-content: center;
   align-items: center;
   border: 2px solid var(--themes-main-color);
-  background: var(--themes-bg-color);
+  background: var(--themes-backgroud-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -286,7 +302,7 @@
 }
 
 .button:hover .button__text {
-  color: var(--themes-bg-color);
+  color: var(--themes-backgroud-color);
 }
 
 .button svg {
@@ -294,7 +310,7 @@
 }
 
 .button:hover svg {
-  color: var(--themes-bg-color);
+  color: var(--themes-backgroud-color);
 }
 
 @supports (mix-blend-mode: difference) {
@@ -331,7 +347,7 @@ dialog::backdrop {
   min-width: 341px;
   border: 2px solid var(--themes-main-color);
   padding: 30px;
-  background: var(--themes-bg-color);
+  background: var(--themes-backgroud-color);
 }
 
 .dialog__container {
