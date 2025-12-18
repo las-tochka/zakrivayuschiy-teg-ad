@@ -23,7 +23,6 @@
         <h1 class="header__description">закрывающий тег</h1>
       </div>
       <nav class="theme-menu header__theme-menu">
-        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
             <button type="button" data-theme="dark" class="theme-menu__button">
@@ -518,23 +517,24 @@
       <div class="main__footer">
         <div class="button__container">
           <button
-          class="button footer__button"
-          type="button"
-          aria-controls="dialog-save"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 21 21"
+            class="button footer__button"
+            type="button"
+            id="open-dialog"
           >
-            <use href="./svg/floppy.svg#floppy"></use>
-          </svg>
-          <span class="button__text">Сохранить на&nbsp;память</span>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+            >
+              <use href="./svg/floppy.svg#floppy"></use>
+            </svg>
+            <span class="button__text">Сохранить на&nbsp;память</span>
+          </button>
         </div>
       </div>
     </main>
+
     <dialog class="dialog" id="dialog-save">
       <div class="dialog__container">
         <div class="dialog__warning">
@@ -548,17 +548,18 @@
           </svg>
           <span>Вставьте дискету, чтобы продолжить</span>
         </div>
-        <form method="dialog">
-          <button
-            type="submit"
-            class="button dialog__button"
-          >
-            <span class="button__text">ОК</span>
-          </button>
-        </form>
 
+        <button
+          type="button"
+          class="button dialog__button"
+          id="dialog-ok"
+        >
+          <span class="button__text">ОК</span>
+        </button>
       </div>
     </dialog>
+
+    <script src="./scripts/dialog.js"></script>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
